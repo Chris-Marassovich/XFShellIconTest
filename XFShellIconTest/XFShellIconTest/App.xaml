@@ -3,9 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:XFShellIconTest"
              mc:Ignorable="d"
              x:Class="XFShellIconTest.App">
     <Application.Resources>
-        
+        <ResourceDictionary>
+            <OnPlatform x:Key="FontAwesome"
+                x:TypeArguments="x:String">
+                <On Platform="Android" Value="fa-solid-900.ttf#Font Awesome 5 Free"/>
+                <On Platform="iOS" Value="Font Awesome 5 Free"/>
+                <On Platform="UWP" Value="Assets/Fonts/fa-solid-900.ttf#Font Awesome 5 Free"/>
+            </OnPlatform>
+
+            <Color x:Key="ColorTabIcon">Gray</Color>
+            <x:Double x:Key="SizeTabIcon">24</x:Double>
+
+            <FontImageSource x:Key="IconTabToday"
+                     FontFamily="{StaticResource FontAwesome}"
+                     Glyph="{x:Static local:IconFont.CalendarDay}"
+                     Size="{StaticResource SizeTabIcon}"
+                     Color="{StaticResource ColorTabIcon}" />
+
+            <FontImageSource x:Key="IconTabNotifications"
+                     FontFamily="{StaticResource FontAwesome}"
+                     Glyph="{x:Static local:IconFont.Bell}"
+                     Size="{StaticResource SizeTabIcon}"
+                     Color="{StaticResource ColorTabIcon}" />
+
+            <FontImageSource x:Key="IconSearch"
+                     FontFamily="{StaticResource FontAwesome}"
+                     Glyph="{x:Static local:IconFont.Search}"
+                     Size="18"
+                     Color="White" />
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
