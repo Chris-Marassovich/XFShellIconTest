@@ -9,7 +9,7 @@
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
+        <ToolbarItem Text="Add" IconImageSource="{StaticResource IconPlusBlack}" Clicked="AddItem_Clicked" />
     </ContentPage.ToolbarItems>
 
     <StackLayout>
@@ -51,6 +51,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Image Source="{StaticResource IconPlusBlack}"
+               Margin="0,0,10,10"
+               HorizontalOptions="End"
+               VerticalOptions="End"/>
     </StackLayout>
 
 </ContentPage>

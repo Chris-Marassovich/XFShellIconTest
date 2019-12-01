@@ -30,6 +30,17 @@
                      Size="{StaticResource SizeTabIcon}"
                      Color="{StaticResource ColorTabIcon}" />
 
+            <FontImageSource x:Key="IconPlus"
+                     FontFamily="{StaticResource FontAwesome}"
+                     Glyph="{x:Static local:IconFont.Plus}"
+                     Size="{StaticResource SizeTabIcon}"
+                     Color="{StaticResource ColorTabIcon}" />
+            <FontImageSource x:Key="IconPlusBlack"
+                     FontFamily="{StaticResource FontAwesome}"
+                     Glyph="{x:Static local:IconFont.Plus}"
+                     Size="{StaticResource SizeTabIcon}"
+                     Color="Red" />
+
             <FontImageSource x:Key="IconSearch"
                      FontFamily="{StaticResource FontAwesome}"
                      Glyph="{x:Static local:IconFont.Search}"
